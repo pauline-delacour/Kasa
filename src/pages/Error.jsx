@@ -1,6 +1,6 @@
 import React from "react";
 
-function Error () {
+const Error = () => {
     return(
         <div>
             <h1>OUPS ERREUR 404!</h1>

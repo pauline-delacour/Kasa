@@ -1,0 +1,33 @@
+@import '../variables.scss';
+
+.image-banner {
+    position: relative;
+    padding-left: 100px;
+    padding-right: 100px;
+    align-items: center;
+    img{
+        height: $imageBannerHeight;
+        width: 1240px;
+        border-radius: $borderRadius;
+    }
+
+    span{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $colorWhite;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 46px;
+        font-weight: bold;
+        width: 733px;
+    }
+}
+
+.card-content{
+    background-color: $backgroundColor;
+    border-radius: $borderRadius;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}

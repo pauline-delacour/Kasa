@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+    margin: auto;
+}
+
+/*color*/
+$colorWhite: #FFFFFF;
+$colorRed: #FF6060;
+$colorBlack: #000000;
+$backgroundColor: #F6F6F6;
+
+/*police*/
+$font-family-base: 'Montserrat', sans-serif;
+$font-size-base: 18px;
+$font-size-medium: 24px;
+$font-size-small: 26px;
+$font-size-large: 12px;
+$font-style: bold;
+
+$imageBannerHeight: 223px;
+$imageBannerWidth: 1240px;
+$borderRadius: 25px;
+
+/* card*/
+$dimensionCard: 340px;
+$borderRadiusCard: 10px; 
+$card-width: 240px;
+$card-height: 240px;
+$gap: 20px;
+$column: 3;
+$rows: 2;

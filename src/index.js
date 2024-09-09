@@ -7,7 +7,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Error from './pages/Error';
 import Footer from './components/Footer';
-import './styles/index.css';
+import './styles/main.scss';
 
 
 
@@ -25,7 +25,6 @@ root.render(
       <Footer />
     </Router>
   </StrictMode>,
-  document.getElementById('root')
 );
 
 

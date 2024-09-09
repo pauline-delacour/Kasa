@@ -1,11 +1,25 @@
 import React from "react";
+import imageBanner from '../assets/imageBanner.png';
+import Card from "../components/Cards";
+import "../styles/Home/Cards.scss"; 
 
-function Home() {
+
+const Home = () => {
   return (
-    <div>
-      <h2>Accueil</h2>
-      <p>Bienvenue sur la page d&apos;accueil</p>
+    <><div className="image-banner">
+      <img src={imageBanner} alt="plage qui donne sur une falaise" />
+      <span>Chez vous, partout et ailleurs</span>
     </div>
+    <div className="card-content">
+        <div className="cards">
+         <Card/>
+         <Card/>
+         <Card/>
+         <Card/>
+         <Card/>
+         <Card/>
+        </div>
+      </div></>
   );
 }
 

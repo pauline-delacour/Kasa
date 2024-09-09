@@ -1,0 +1,36 @@
+@import '../variables.scss';
+
+.card-content {
+    width: 1240px;
+
+    .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    margin-top: 55px;
+    margin-bottom: 55px;
+    padding: 55px;
+    row-gap: 55px;
+    gap: 55px;
+    }
+    .card {
+    position: relative;
+    background-color: $colorRed;
+    border-radius: $borderRadiusCard;
+    width: $dimensionCard;
+    height: $dimensionCard;
+    }
+
+    span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: $colorWhite;
+    font-size: $font-size-small;
+    font-family: $font-family-base;
+    font-weight: $font-style;
+    padding: 5px;
+    width: 136px;
+    }
+}
+
