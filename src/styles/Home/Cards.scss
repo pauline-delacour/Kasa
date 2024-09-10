@@ -1,28 +1,17 @@
-@import '../variables.scss';
+@import "../variables.scss";
 
-.card-content {
-    width: 1240px;
+.card {
+  position: relative;
 
-    .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    margin-top: 55px;
-    margin-bottom: 55px;
-    padding: 55px;
-    row-gap: 55px;
-    gap: 55px;
-    }
-    .card {
-    position: relative;
-    background-color: $colorRed;
-    border-radius: $borderRadiusCard;
+  .card-cover {
     width: $dimensionCard;
     height: $dimensionCard;
-    }
+    border-radius: $borderRadiusCard;
+  }
 
-    span {
+  .card-title {
     position: absolute;
+    width: 95%;
     bottom: 10px;
     left: 10px;
     color: $colorWhite;
@@ -30,7 +19,5 @@
     font-family: $font-family-base;
     font-weight: $font-style;
     padding: 5px;
-    width: 136px;
-    }
+  }
 }
-

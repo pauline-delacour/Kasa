@@ -1,11 +1,17 @@
 import React from "react";
+import "../styles/Home/Cards.scss";
+import PropTypes from 'prop-types';
 
-const Card = () => {
+const Card = ({title, cover,}) => {
     return(
         <div className="card">
-          <span>Titre de la location</span>
+          <img src={cover} alt={title} className="card-cover"/>
+          <span className="card-title">{title}</span>
         </div>
     );
 }
-
+Card.propTypes = {
+  title: PropTypes.string,
+  cover: PropTypes.string,
+}
 export default Card;
