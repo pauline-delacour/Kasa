@@ -1,0 +1,41 @@
+@import "../variables.scss";
+
+.collapse {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.collapse-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  outline: none;
+  text-align: left;
+  width: 1023px;
+  background-color: $colorRed;
+  color: $colorWhite;
+  font-size: $font-size-small;
+  font-family: $font-family-base;
+  border-radius: 5px;
+
+  margin-top: 30px;
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+.collapse-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  padding: 0 10px;
+  background-color: $backgroundColor;
+}
+
+.collapse-content.open {
+  max-height: 200px; 
+}
+
+.arrow {
+  transition: transform 0.2s ease;
+}
