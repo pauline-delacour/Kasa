@@ -1,0 +1,29 @@
+@import '../variables.scss';
+
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: $font-family-base;
+    gap: 139px;
+    
+    h1 {
+        font-size: $font-size-xlarge;
+        color: $colorRed;
+        margin: 0;
+    }
+    p {
+        font-size: 36px;
+        color: $colorRed;
+        margin: 0
+        
+    };
+
+    .home {
+        font-family: $font-family-base;
+        font-size: $font-size-base;
+        padding-bottom: 139px
+    }
+}
