@@ -5,13 +5,14 @@
     padding-left: 100px;
     padding-right: 100px;
     align-items: center;
-    img{
+
+    .imageBanner{
         height: $imageBannerHeight;
         width: 1240px;
         border-radius: $borderRadius;
     }
 
-    span{
+    .textBanner{
         position: absolute;
         top: 50%;
         left: 50%;
@@ -23,11 +24,22 @@
         width: 733px;
     }
 }
-
-.card-content{
+.card-content {
+    width: 1240px;
     background-color: $backgroundColor;
     border-radius: $borderRadius;
     margin-top: 50px;
     margin-left: 100px;
     margin-right: 100px;
-}
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        margin-top: 55px;
+        margin-bottom: 55px;
+        padding: 55px;
+        row-gap: 55px;
+        gap: 55px;
+      }
+  }
