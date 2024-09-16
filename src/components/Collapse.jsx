@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import '../styles/Collapse/Collapse.scss';
 import PropTypes from 'prop-types';
-import { FaChevronDown } from "react-icons/fa";
+import { FaChevronUp } from "react-icons/fa";
 
 const Collapse = ({ title, content }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +13,7 @@ const Collapse = ({ title, content }) => {
       <div className="collapse">
         <button className="collapse-header" onClick={toggleCollapse}>
           <span className={`arrow ${isOpen ? 'open' : ''}`}>{title} </span>
-          <FaChevronDown />
+          <FaChevronUp className={`chevron ${isOpen ? 'open' : ''}`} />
         </button>
         <div className={`collapse-content ${isOpen ? 'open' : ''}`}>
           {content}
