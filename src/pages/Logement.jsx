@@ -4,6 +4,7 @@ import logements from "../data/logements.json";
 import Rating from "../components/Rating";
 import Profile from "../components/Profile";
 import Collapse from "../components/Collapse";
+import SlidesShow from "../components/Slideshow";
 
 const Logement = () => {
   const { id } = useParams();
@@ -11,11 +12,8 @@ const Logement = () => {
 
   return (
     <div className="articleLogement">
-      <img
-        src={logement.cover}
-        alt={`Image de ${logement.title}`}
-        className="caroussel"
-      />
+      <SlidesShow pictures={logement.pictures} />
+
       <div className="dessous-image">
         <div className="dessous-image-gauche">
           <span className="title">{logement.title}</span>
