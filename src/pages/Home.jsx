@@ -1,26 +1,33 @@
 import React from "react";
-import imageBanner from '../assets/imageBanner.png';
 import Card from "../components/Cards";
-import "../styles/Home/Home.scss";
 import logements from "../data/logements.json";
+import BannerImage from "../components/Banner";
+import homeImage from "../assets/imageBanner.png";
 
 const Home = () => {
   return (
-    <><div className="image-banner">
-      <img src={imageBanner} alt="plage qui donne sur une falaise" className="imageBanner"/>
-      <span className="textBanner">Chez vous, partout et ailleurs</span>
-    </div>
-    <div className="card-content">
+    <div>
+      <BannerImage
+        image={homeImage}
+        allText="vue sur la mer"
+        text="Chez vous, partout et ailleurs"
+        hasOverlay={true}
+      />
+
+      <div className="card-content">
         <div className="cards">
-        {logements.map((logement) => (
-          <Card
-          key={logement.id}
-          title={logement.title}
-          cover={logement.cover}/>
-        ))}
+          {logements.map((logement) => (
+            <Card
+              key={logement.id}
+              id={logement.id}
+              title={logement.title}
+              cover={logement.cover}
+            />
+          ))}
         </div>
-      </div></>
+      </div>
+    </div>
   );
-}
+};
 
 export default Home;
