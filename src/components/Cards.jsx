@@ -1,14 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Card = ({ id, title, cover }) => {
+  const navigate = useNavigate();
+  const handleNavigation = () => {
+    navigate(`/logement/${id}`)
+  }
   return (
-    <div className="card">
-      <Link to={`/logement/${id}`}>
+    <div className="card" onClick={handleNavigation}>
         <img src={cover} alt={title} className="card-cover" />
         <span className="card-title">{title}</span>
-      </Link>
     </div>
   );
 };
