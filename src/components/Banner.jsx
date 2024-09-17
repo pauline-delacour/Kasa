@@ -3,6 +3,10 @@ import PropTypes from "prop-types";
 
 
 const BannerImage = ({ image, altText , text, hasOverlay }) => {
+    //Valeur par défault défini 
+    text = text || '';
+    hasOverlay = hasOverlay || false; 
+
     return(
         <div className="bannerImage">
             <img src={image} alt={altText} className="imgBanner"/>  
@@ -17,10 +21,5 @@ BannerImage.propTypes = {
     altText: PropTypes.string.isRequired,
     text: PropTypes.string,
     hasOverlay: PropTypes.bool
-}
-
-BannerImage.defaultProps = {
-    text: '',
-    hasOverlay: false
 }
 export default BannerImage;
