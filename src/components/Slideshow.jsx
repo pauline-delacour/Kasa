@@ -23,6 +23,9 @@ const SlidesShow = ({ pictures }) => {
     );
   };
 
+  // Cacher les flèches et la numerotation s'il y a qu'une seule image
+  const singleImage = pictures.length === 1;
+
   return (
     <div className="slideshow">
       <img
@@ -30,20 +33,25 @@ const SlidesShow = ({ pictures }) => {
         alt={`Slide ${currentImage + 1}`}
         className="slideshow-image"
       />
-      {/*fleche pour aller a l'image précédente*/}
-      <button className="prev" onClick={prevImage}>
-        <img src={vectorLeft} alt="Prévious"/>
-       
-      </button>
-      {/*fleche pour aller a l'image suivante */}
-      <button className="next" onClick={nextImage}>
-      <img src={vectorRight} alt="Next"/>
-        
-      </button>
-      {/*Affichage de la numeration de la diapositive*/}
-      <div className="slideshow-count">
-        {currentImage + 1}/{pictures.length}
-      </div>
+
+      {/*Affichage des fleches Prévious et Next s'il y a plus d'une image */}
+      {!singleImage && (
+        <>
+          <button className="prev" onClick={prevImage}>
+            <img src={vectorLeft} alt="Prévious" />
+          </button>
+
+          <button className="next" onClick={nextImage}>
+            <img src={vectorRight} alt="Next" />
+          </button>
+        </>
+      )}
+      {/*Affichage de la numération de la diapositive s'il y a plus d'une image */}
+      {!singleImage && (
+        <div className="slideshow-count">
+          {currentImage + 1}/{pictures.length}
+        </div>
+      )}
     </div>
   );
 };
