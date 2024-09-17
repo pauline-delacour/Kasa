@@ -9,18 +9,25 @@ $colorWhite: #FFFFFF;
 $colorRed: #FF6060;
 $colorBlack: #000000;
 $backgroundColor: #F6F6F6;
+$ratingColor: #E3E3E3;
 
 /*police*/
 $font-family-base: 'Montserrat', sans-serif;
+$font-size-xsmall: 12px;
+$font-size-small: 14px;
 $font-size-base: 18px;
 $font-size-medium: 24px;
-$font-size-small: 26px;
-$font-size-large: 12px;
+$font-size-large: 26px;
+$font-size-xlarge: 36px;
+$font-size-xxlarge: 48px;
+$font-size-xxxlarge: 288px;
 $font-style: bold;
 
+/* Image Banner */
 $imageBannerHeight: 223px;
 $imageBannerWidth: 1240px;
 $borderRadius: 25px;
+$borderRadiusmin: 10px;
 
 /* card*/
 $dimensionCard: 340px;
