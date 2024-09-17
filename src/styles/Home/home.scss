@@ -1,45 +1,36 @@
-@import '../variables.scss';
+@import "../variables.scss";
 
-.image-banner {
-    position: relative;
-    padding-left: 100px;
-    padding-right: 100px;
-    align-items: center;
-
-    .imageBanner{
-        height: $imageBannerHeight;
-        width: 1240px;
-        border-radius: $borderRadius;
-    }
-
-    .textBanner{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: $colorWhite;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 46px;
-        font-weight: bold;
-        width: 733px;
-    }
-}
 .card-content {
-    width: 1240px;
-    background-color: $backgroundColor;
-    border-radius: $borderRadius;
-    margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
+  background-color: $backgroundColor;
+  border-radius: $borderRadius;
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    margin-top: 55px;
+    margin-bottom: 55px;
+    padding: 55px;
+    row-gap: 55px;
+    gap: 55px;
+  }
+}
+@media (min-width: 375px) and (max-width: 768px) {
+  .card-content {
+    background-color: transparent;
+    margin: 0;
 
     .cards {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, auto);
-        margin-top: 55px;
-        margin-bottom: 55px;
-        padding: 55px;
-        row-gap: 55px;
-        gap: 55px;
-      }
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      border-radius: $borderRadiusmin;
+      margin-top: 0px;
+      margin-bottom: 22px;
+      padding: 20px;
+      gap: 20px;
+    }
   }
+}

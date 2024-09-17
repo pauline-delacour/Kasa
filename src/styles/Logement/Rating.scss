@@ -1,0 +1,23 @@
+@import "../variables.scss";
+
+.star-rating {
+  display: flex;
+  align-items: center;
+  .star {
+    font-size: $font-size-medium;
+    color: $ratingColor;
+    row-gap: 20px;
+    margin: 5px;
+  }
+  .star.filled {
+    color: $colorRed;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+  .star-rating {
+    .star {
+      font-size: $font-size-small;
+    }
+  }
+}

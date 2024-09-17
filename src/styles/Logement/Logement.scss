@@ -1,0 +1,128 @@
+@import "../variables.scss";
+
+.articleLogement {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 100px;
+
+  .dessous-image {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    .dessous-image-gauche {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 10px;
+
+      .title {
+        color: $colorRed;
+        font-size: $font-size-medium;
+        font-family: $font-family-base;
+        // margin-top: 10px;
+      }
+      .location {
+        font-family: $font-family-base;
+      }
+    }
+
+    .tags {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      gap: 30px;
+      height: 25px;
+      text-align: center;
+      margin-top: 20px;
+
+      .tag {
+        color: $colorWhite;
+        background-color: $colorRed;
+        font-family: $font-family-base;
+        font-size: $font-size-xsmall;
+        font-weight: $font-style;
+        border-radius: $borderRadius;
+        min-width: 115px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+      }
+    }
+    .dessous-image-droite {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+  .article-collapse {
+    display: flex;
+    justify-content: space-between;
+
+    .collapse-header {
+      width: 100%;
+      height: 52px;
+      font-size: $font-size-base;
+    }
+    .collapse-content {
+      width: 582px;
+      ul {
+        margin: 0;
+        list-style-type: none;
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+  .articleLogement {
+    margin: 27px 20px;
+    .dessous-image {
+      flex-direction: column;
+      margin-top: 0px;
+      .tags {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 0;
+        .tag {
+          min-width: 80px;
+          font-size: 10px;
+          text-align: center;
+        }
+      }
+      .dessous-image-gauche {
+        margin-top: 10px;
+      }
+
+      .dessous-image-droite {
+        margin-top: 30px;
+        flex-direction: initial;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .profile {
+          order: 2;
+        }
+        .star-rating {
+          order: 1;
+        }
+      }
+    }
+
+    .article-collapse {
+      flex-direction: column;
+      .collapse-header {
+        font-size: 13px;
+        height: 30px;
+      }
+    }
+  }
+}

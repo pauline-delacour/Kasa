@@ -1,0 +1,61 @@
+@import "../variables.scss";
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 415px;
+  overflow: hidden;
+  .slideshow-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: $borderRadius;
+  }
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    color: $colorWhite;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .prev {
+    left: 15px;
+  }
+  .next {
+    right: 15px;
+  }
+
+  .slideshow-count {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: $font-family-base;
+    color: $colorWhite;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+  .slideshow {
+    height: 255px;
+    .slideshow-image {
+      height: 255px;
+      border-radius: 10px;
+    }
+    .prev img {
+      width: 20px;
+    }
+    .next img {
+      width: 20px;
+    }
+  }
+  .slideshow-count {
+    display: none;
+  }
+}

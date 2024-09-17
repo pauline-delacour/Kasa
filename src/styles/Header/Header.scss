@@ -1,22 +1,39 @@
-@import '../variables.scss';
+@import "../variables.scss";
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 45px 100px 50px 100px;
-}
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 45px 100px 50px 100px;
 
-.nav-link {
+  .nav-link {
     display: flex;
     gap: 20px;
     font-family: $font-family-base;
-}
-
-.nav-link a {
+  }
+  .nav-link a {
     text-decoration: none;
     color: $colorBlack;
     font-size: $font-size-medium;
+  }
+  .nav-link a.active {
+    text-decoration: underline;
+    text-decoration-color: $colorBlack;
+  }
 }
 
-
+@media (min-width: 375px) and (max-width: 768px) {
+  .header {
+    margin: 20px;
+    .logo-kasa {
+      width: 145px;
+      height: 47px;
+    }
+    .nav-link a {
+      text-decoration: none;
+      color: $colorBlack;
+      font-size: $font-size-xsmall;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -3,39 +3,68 @@
 .collapse {
   border-radius: 5px;
   overflow: hidden;
+  .collapse-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    outline: none;
+    text-align: left;
+    background-color: $colorRed;
+    color: $colorWhite;
+    font-size: $font-size-medium;
+    font-family: $font-family-base;
+    border-radius: 5px;
+    margin-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+
+    .arrow {
+      transition: transform 0.2s ease;
+    }
+
+    .chevron {
+      transition: transform 0.2s ease;
+      width: 32px;
+      height: 32px;
+    }
+
+    .chevron.open {
+      transform: rotate(-180deg);
+    }
+  }
+  .collapse-content {
+    max-height: 0px;
+    padding: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3 ease-out;
+    background-color: $backgroundColor;
+    overflow-wrap: break-word;
+    text-align: justify;
+    max-width: 100%;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    box-sizing: border-box;
+  }
+
+  .collapse-content.open {
+    max-height: 500px;
+    padding: 20px;
+  }
 }
 
-.collapse-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: none;
-  outline: none;
-  text-align: left;
-  width: 1023px;
-  background-color: $colorRed;
-  color: $colorWhite;
-  font-size: $font-size-small;
-  font-family: $font-family-base;
-  border-radius: 5px;
-
-  margin-top: 30px;
-  padding-left: 15px;
-  cursor: pointer;
-}
-
-.collapse-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  padding: 0 10px;
-  background-color: $backgroundColor;
-}
-
-.collapse-content.open {
-  max-height: 200px; 
-}
-
-.arrow {
-  transition: transform 0.2s ease;
+@media (min-width: 375px) and (max-width: 768px) {
+  .collapse {
+    .collapse-header {
+      font-size: 13px;
+      margin-top: 20px;
+      .chevron {
+        width: 16px;
+      }
+    }
+    .collapse-content {
+      font-size: $font-size-xsmall;
+    }
+  }
 }

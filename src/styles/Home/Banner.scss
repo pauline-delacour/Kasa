@@ -1,0 +1,61 @@
+@import "../variables.scss";
+
+.bannerImage {
+  position: relative;
+  margin-left: 100px;
+  margin-right: 100px;
+  align-items: center;
+  overflow: hidden;
+
+  .imgBanner {
+    height: $imageBannerHeight;
+    width: 100%;
+    border-radius: $borderRadius;
+    object-fit: cover;
+    position: relative;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $imageBannerHeight;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: $borderRadius;
+    z-index: 0;
+  }
+  .textbanner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    color: $colorWhite;
+    font-family: $font-family-base;
+    font-size: $font-size-xxlarge;
+    font-weight: $font-style;
+    width: 75%;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+  .bannerImage {
+    margin-left: 20px;
+    margin-right: 20px;
+
+    .imgBanner {
+      height: 111px;
+      border-radius: $borderRadiusmin;
+    }
+
+    .overlay {
+      height: 111px;
+      border-radius: $borderRadiusmin;
+    }
+    .textbanner {
+      font-size: $font-size-medium;
+      left: 35%;
+    }
+  }
+}

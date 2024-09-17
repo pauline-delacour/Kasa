@@ -1,0 +1,33 @@
+@import "../variables.scss";
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  .profile-name {
+    display: flex;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    text-align: right;
+    color: $colorRed;
+    width: 93px;
+  }
+  .profile-picture {
+    width: 64px;
+    height: 64px;
+    border-radius: 50px;
+    object-fit: cover;
+  }
+}
+@media (min-width: 375px) and (max-width: 768px) {
+  .profile {
+    .profile-name {
+      font-size: $font-size-xsmall;
+      width: 60px;
+    }
+    .profile-picture {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

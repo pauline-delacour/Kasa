@@ -23,3 +23,11 @@
     width: 100%;
   }
 }
+@media (min-width: 375px) and (max-width: 768px) {
+  .footer {
+    .footer-text {
+      font-size: $font-size-xsmall;
+      width: 134px;
+    }
+  }
+}
