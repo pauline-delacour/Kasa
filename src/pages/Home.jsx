@@ -9,7 +9,7 @@ const Home = () => {
     <div>
       <BannerImage
         image={homeImage}
-        allText="vue sur la mer"
+        altText="vue sur la mer"
         text="Chez vous, partout et ailleurs"
         hasOverlay={true}
       />
