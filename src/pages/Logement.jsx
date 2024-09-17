@@ -1,15 +1,22 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import logements from "../data/logements.json";
 import Rating from "../components/Rating";
 import Profile from "../components/Profile";
 import Collapse from "../components/Collapse";
 import SlidesShow from "../components/Slideshow";
 
+
 const Logement = () => {
+  // récupération de l'id à partir de l'URL
   const { id } = useParams();
+  // recherche du logement avec l'id dans le fichier Json
   const logement = logements.find((element) => element.id === id);
 
+  //Si le logement n'existe pas, redirection vers la page d'erreur
+  if (!logement) {
+    return <Navigate to="/error" />;
+  }
   return (
     <div className="articleLogement">
       <SlidesShow pictures={logement.pictures} />
@@ -27,8 +34,8 @@ const Logement = () => {
           </div>
         </div>
         <div className="dessous-image-droite">
-          <Profile host={logement.host} />
-          <Rating rating={logement.rating} />
+          <Profile host={logement.host}/>
+          <Rating rating={logement.rating}/>
         </div>
       </div>
       <div className="article-collapse">
