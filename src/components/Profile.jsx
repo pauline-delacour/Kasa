@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Profile = ({ host }) => {
   return (
-    <div className="Profile">
+    <div className="profile">
       <span className="profile-name">{host.name}</span>
 
       <img
