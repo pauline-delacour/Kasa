@@ -6,7 +6,6 @@ import Profile from "../components/Profile";
 import Collapse from "../components/Collapse";
 import SlidesShow from "../components/Slideshow";
 
-
 const Logement = () => {
   // récupération de l'id à partir de l'URL
   const { id } = useParams();
@@ -34,8 +33,8 @@ const Logement = () => {
           </div>
         </div>
         <div className="dessous-image-droite">
-          <Profile host={logement.host}/>
-          <Rating rating={logement.rating}/>
+          <Profile host={logement.host} />
+          <Rating rating={logement.rating} />
         </div>
       </div>
       <div className="article-collapse">

@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 body {
-    margin: auto;
+  margin: auto;
 }
 
 /*color*/
-$colorWhite: #FFFFFF;
-$colorRed: #FF6060;
+$colorWhite: #ffffff;
+$colorRed: #ff6060;
 $colorBlack: #000000;
-$backgroundColor: #F6F6F6;
-$ratingColor: #E3E3E3;
+$backgroundColor: #f6f6f6;
+$ratingColor: #e3e3e3;
 
 /*police*/
-$font-family-base: 'Montserrat', sans-serif;
+$font-family-base: "Montserrat", sans-serif;
 $font-size-xsmall: 12px;
 $font-size-small: 14px;
 $font-size-base: 18px;
@@ -31,7 +31,7 @@ $borderRadiusmin: 10px;
 
 /* card*/
 $dimensionCard: 340px;
-$borderRadiusCard: 10px; 
+$borderRadiusCard: 10px;
 $card-width: 240px;
 $card-height: 240px;
 $gap: 20px;
