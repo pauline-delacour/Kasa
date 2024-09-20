@@ -36,21 +36,23 @@
   }
   .collapse-content {
     max-height: 0px;
-    padding: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3 ease-out;
+    transition: max-height 0.3s ease-out;
     background-color: $backgroundColor;
-    overflow-wrap: break-word;
-    text-align: justify;
     max-width: 100%;
-    font-family: $font-family-base;
-    font-size: $font-size-base;
     box-sizing: border-box;
+
+    p {
+      margin: 20px;
+      overflow-wrap: break-word;
+      text-align: justify;
+      font-family: $font-family-base;
+      font-size: $font-size-base;
+    }
   }
 
   .collapse-content.open {
     max-height: 500px;
-    padding: 20px;
   }
 }
 

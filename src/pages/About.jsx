@@ -10,7 +10,7 @@ const About = () => {
     <div className="About">
       <BannerImage
        image={imageAbout}
-       allText="Montagne "
+       altText="Montagne"
        text=""
        hasOverlay={false}
        />
