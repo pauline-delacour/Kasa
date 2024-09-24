@@ -28,13 +28,16 @@
   .textbanner {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-40%, -50%);
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: max-content;
+    text-align: center;
+    transform: translate(0%, -50%);
     color: $colorWhite;
     font-family: $font-family-base;
     font-size: $font-size-xxlarge;
     font-weight: $font-style;
-    width: 75%;
     z-index: 1;
   }
 }
